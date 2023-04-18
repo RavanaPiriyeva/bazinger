@@ -1,0 +1,12 @@
+
+@mixin white-btn {
+    @extend %btn;
+    border: 2px solid $white-color;
+    color: $white-color;
+    background-color: transparent;
+}
+@mixin blue-btn {
+    @extend %btn;
+    color: $white-color;
+    background-color: $blue-color;
+}
