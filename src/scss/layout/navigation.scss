@@ -5,6 +5,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 1;
+
   ul {
     list-style: none;
     text-transform: uppercase;
@@ -14,6 +15,10 @@ nav {
       color: $white-color;
       text-decoration: none;
       padding: 10px;
+      @media screen and (max-width: 850px) {
+        padding: 5px;
+      }
+
     }
     li:hover {
       a {
@@ -32,4 +37,13 @@ nav {
       }
     }
   }
+
+.menu-icon{
+  text-align: center;
+  background-color: $blue-color;
+  padding: 10px 0;
+  font-size: 20px;
+  color: $white-color;
+  border-radius: 10px;
+}
 }

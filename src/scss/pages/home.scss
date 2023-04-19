@@ -1,35 +1,43 @@
+@import "../abstracts/variables.scss";
+@import "../abstracts/mixins.scss";
+@import "../abstracts/extend.scss";
 .hero {
   position: relative;
   font-family: $main-font;
   &-img {
     width: 100%;
+    height: 110vh;
     img {
       width: 100%;
-      height: 98vh;
+      height: 110vh;
+      object-fit: cover;
     }
   }
   &-body-inner {
     width: 100%;
     position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
+    top: 45vh;
     left: 0;
+    @media screen and (max-width: 850px) {
+      top: 35vh;
+      text-align: center;
+    }
+    @media screen and (max-width: 578px) {
+      top: 20vh;
+    }
     &-text {
       padding: 10px;
       color: $white-color;
-      h2 {
-        font-size: 50px;
-        font-weight: 300;
-      }
-      p {
-        font-weight: 300;
-        font-size: 18px;
-        margin: 40px 0 50px;
-      }
+
+      @include main-text;
       a {
         &.white-btn {
           @include white-btn;
-          margin-right: 40px;
+          margin-right: 30px;
+          margin-bottom: 10px;
+          @media screen and (max-width: 568px) {
+            margin-right: 0;
+          }
         }
         &.blue-btn {
           @include blue-btn;
@@ -80,6 +88,20 @@
   &-left-icon {
     left: 50px;
   }
+  @media screen and (max-width: 768px) {
+    &-next-icon {
+      font-size: 18px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+    &-left-icon {
+      font-size: 18px;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
   &-circle-icon {
     color: $white-color;
     position: absolute;
@@ -95,15 +117,201 @@
     }
   }
 }
-.features{
-    padding: $section-padding;
-    font-family: $main-font;
-    &-title{
-        color: $dark-color;
-        text-align: center; 
-        h2{
-           font-size: 30px;
-           font-weight: 900;
-        }
+.features {
+  padding: $section-padding;
+  font-family: $main-font;
+  background-color: $grey-color;
+  box-shadow: 2px 7px 20px 0px #bbbbbb8f;
+  &-title {
+    @include title;
+  }
+  &-item {
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    &-img {
+      background-color: $blue-color;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      transition: all 0.5s;
     }
+    &-text {
+      h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 900;
+        padding: 20px 0;
+        transition: all 0.5s;
+      }
+      p {
+        line-height: 25px;
+        color: gray;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .features-item-img {
+        background-color: $dark-color;
+      }
+      h3 {
+        color: $blue-color;
+      }
+    }
+  }
+}
+.gallery {
+  padding: $section-padding;
+  font-family: $main-font;
+  &-title {
+    @include title;
+    margin-bottom: 40px;
+  }
+  &-item {
+    text-align: center;
+    padding: 10px;
+    p {
+      line-height: 25px;
+      color: gray;
+      padding: 20px;
+    }
+    &-body {
+      position: relative;
+      &-img {
+        max-height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-text {
+        color: $blue-color;
+        text-transform: uppercase;
+        font-size: 16px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        h3 {
+          font-weight: 900;
+        }
+      }
+      &-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 99%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        color: $white-color;
+        background-color: #45ccfd8f;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 5px;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      .gallery-item-body-icon {
+        width: 100%;
+      }
+    }
+  }
+}
+.action {
+  font-family: $main-font;
+  color: $white-color;
+  position: relative;
+
+  &-img {
+    width: 100%;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      height: 100%;
+    }
+    &-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      text-align: center;
+      padding: 10px;
+      &-text {
+        @include main-text;
+        text-align: center;
+        p {
+          margin: 0 auto;
+        }
+        h2 {
+          padding: 30px 0;
+        }
+      }
+      &-icon {
+        @include white-btn;
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  font-family: $main-font;
+  &-body {
+    position: relative;
+    &-form {
+      max-width: 300px;
+      padding: 20px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #45ccfdb6;
+      border-radius: 10px;
+      p {
+        color: $white-color;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+        padding: 15px 0;
+      }
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 15px 0;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+      }
+      input::placeholder {
+        text-align: center;
+      }
+      textarea::placeholder {
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 70px;
+        background-color: $dark-color;
+        color: $blue-color;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+  }
 }

@@ -1,113 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/css/main.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div id="navbar" class="navbar">
-          <div class="container">
-            <div class="row align-items-center navbar-body">
-              <div class="col-5 navbar-logo">
-                <img src="./src/assets/img/logo.png" alt="logo" />
-              </div>
-              <div class="col-7 navbar-list">
-                <ul class="d-flex align-items-center justify-content-around">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Galery</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Card</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Action</a></li>
-                </ul>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Varela+Round&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div id="navbar" class="navbar">
+        <div class="container">
+          <div class="row align-items-center navbar-body justify-content-between">
+            <div class="col-5 navbar-logo">
+              <img src="./src/assets/img/logo.png" alt="logo" />
+            </div>
+            <div class=" d-none d-md-block col-7 navbar-list">
+              <ul class="d-flex align-items-center justify-content-around">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Card</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Action</a></li>
+              </ul>
+            </div>
+            <div class="d-block d-md-none menu-icon col-2">
+              <i class="fa-solid fa-bars"></i>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section id="hero" class="hero">
-        <div class="container-fluid">
-          <div class="hero-body">
-            <div class="hero-img">
-              <img src="./src/assets/img/banner.png" alt="heroimg" />
-            </div>
-            <div class="hero-body-inner">
-              <div class="container">
-                <div class="row justify-content-end align-items-center">
-                  <div class="hero-body-inner-text col-7">
-                    <h2>Simple, Beautiful <strong>and Amazing</strong></h2>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aperiam aliquid et nisi voluptatem fugit corrupti
-                      mollitia. At iste quibusdam delectus distinctio eveniet
-                      sunt ex, porro, illum voluptate id assumenda molestias.
-                    </p>
-                    <a href="#" class="white-btn">Download</a>
-                    <a href="#" class="blue-btn">Leran more</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="hero">
+      <div class="container-fluid">
+        <div class="hero-body">
+          <div class="hero-img">
+            <img src="./src/assets/img/banner.png" alt="heroimg" />
+          </div>
+          <div class="hero-body-inner">
+            <div class="container">
+              <div class="row justify-content-end-lg justify-content-center align-items-center">
+                <div class="hero-body-inner-text col-12 col-lg-7">
+                  <h2>Simple, Beautiful <strong>and Amazing</strong></h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aperiam aliquid et nisi voluptatem fugit corrupti
+                    mollitia. At iste quibusdam delectus distinctio eveniet
+                    sunt ex, porro, illum voluptate id assumenda molestias.
+                  </p>
+                  <a href="#" class="white-btn">Download</a>
+                  <a href="#" class="blue-btn">Leran more</a>
 
-                    <div class="system-icon d-flex align-items-center">
-                      <p>System:</p>
-                      <div class="android-img">
-                        <img src="./src/assets/img/android.png" alt="android" />
-                      </div>
-                      <div class="mac-img">
-                        <img src="./src/assets/img/apple.png" alt="mac" />
-                      </div>
+                  <div class="system-icon d-flex align-items-center">
+                    <p>System:</p>
+                    <div class="android-img">
+                      <img src="./src/assets/img/android.png" alt="android" />
+                    </div>
+                    <div class="mac-img">
+                      <img src="./src/assets/img/apple.png" alt="mac" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="hero-next-icon">
-              <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="hero-next-icon">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="hero-left-icon">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="hero-circle-icon">
+            <i class="fa-regular fa-circle"></i>
+            <i class="fa-regular fa-circle"></i>
+            <i class="fa-regular fa-circle"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <div class="features-title">
+          <h2>summarise the features</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-8 col-md-6 col-lg-3 features-item">
+            <div class="features-item-img">
+              <img src="./src/assets/img/layout.png" alt="layoutimg">
             </div>
-            <div class="hero-left-icon">
-              <i class="fa-solid fa-chevron-left"></i>
+            <div class="features-item-text">
+              <h3>Attractive layout</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, totam? Perferendis repellendus
             </div>
-            <div class="hero-circle-icon">
-              <i class="fa-regular fa-circle"></i>
-              <i class="fa-regular fa-circle"></i>
-              <i class="fa-regular fa-circle"></i>
+          </div>
+
+          <div class="col-8 col-md-6 col-lg-3 features-item">
+            <div class="features-item-img">
+              <img src="./src/assets/img/phone.png" alt="layoutimg">
+            </div>
+            <div class="features-item-text">
+              <h3>responsiv design</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, totam? Perferendis repellendus
+            </div>
+          </div>
+
+          <div class="col-8 col-md-6 col-lg-3 features-item">
+            <div class="features-item-img">
+              <img src="./src/assets/img/chat.png" alt="layoutimg">
+            </div>
+            <div class="features-item-text">
+              <h3>multipurpose</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, totam? Perferendis repellendus
+            </div>
+          </div>
+
+          <div class="col-8 col-md-6 col-lg-3 features-item">
+            <div class="features-item-img">
+              <img src="./src/assets/img/message.png" alt="layoutimg">
+            </div>
+            <div class="features-item-text">
+              <h3>easy customize</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, totam? Perferendis repellendus
             </div>
           </div>
         </div>
-      </section>
-      <section id="features" class="features">
-        <div class="container">
-          <div class="features-title">
-            <h2>summarise the features</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              consectetur adipisicing elit.
-            </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="gallery-title">
+          <h2>show the galery</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-8 col-md-6 col-lg-3 gallery-item">
+            <div class="gallery-item-body">
+              <div class="gallery-item-body-img">
+                <img src="./src/assets/img/gallery.png" alt="gallery">
+              </div>
+              <div class="gallery-item-body-text">
+                <h3>secreenshot#1</h3>
+              </div>
+              <div class="gallery-item-body-icon">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias doloribus quasi rerum architecto!
+              Ratione enim ullam, </p>
           </div>
-          <div class="row">
-            <div class="features-item"></div>
+          <div class="col-8 col-md-6 col-lg-3 gallery-item">
+            <div class="gallery-item-body">
+              <div class="gallery-item-body-img">
+                <img src="./src/assets/img/gallery.png" alt="gallery">
+              </div>
+              <div class="gallery-item-body-text">
+                <h3>secreenshot#1</h3>
+              </div>
+              <div class="gallery-item-body-icon">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias doloribus quasi rerum architecto!
+              Ratione enim ullam, </p>
+          </div>
+          <div class="col-8 col-md-6 col-lg-3 gallery-item">
+            <div class="gallery-item-body">
+              <div class="gallery-item-body-img">
+                <img src="./src/assets/img/gallery.png" alt="gallery">
+              </div>
+              <div class="gallery-item-body-text">
+                <h3>secreenshot#1</h3>
+              </div>
+              <div class="gallery-item-body-icon">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias doloribus quasi rerum architecto!
+              Ratione enim ullam, </p>
+          </div>
+          <div class="col-8 col-md-6 col-lg-3 gallery-item">
+            <div class="gallery-item-body">
+              <div class="gallery-item-body-img">
+                <img src="./src/assets/img/gallery.png" alt="gallery">
+              </div>
+              <div class="gallery-item-body-text">
+                <h3>secreenshot#1</h3>
+              </div>
+              <div class="gallery-item-body-icon">
+                <i class="fa-solid fa-plus"></i>
+              </div>
+
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias doloribus quasi rerum architecto!
+              Ratione enim ullam, </p>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+
+    <section id="action" class="action">
+      <div class="container-fluid">
+        <div class="action-img">
+          <img src="./src/assets/img/playerimg.png" alt="action">
+          <div class="action-img-inner">
+            <div class="container">
+              <div class="action-img-inner-icon">
+                <img src="./src/assets/img/player.png" alt="player">
+              </div>
+              <div class="action-img-inner-text">
+                <h2>Watch the best Technology in <strong>Action</strong> </h2>
+                <p class="col-7">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At obcaecati, voluptatem
+                  perferendis inventore
+                  dolores labore dolor accusantium repellendus. Iure ratione saepe reiciendis deleniti asperiores
+                  aliquid
+                  modi consectetur vero quisquam odio.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container-fluid">
+        <div class="contact-body">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3034.2924616315768!2d49.85308057008955!3d40.49091540533941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2saz!4v1681889057526!5m2!1sen!2saz"
+            width="100%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="contact-body-form">
+            <p>Contact</p>
+            <form>
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Surname">
+              <input type="email" placeholder="Email">
+              <textarea cols="30" rows="10" placeholder="Message"></textarea>
+              <button>Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row justify-content-between">
+        <p class="col-3">Ravana Piriyeva | 2023 | April | Baku </p>
+        <p class="col-3">Terms of Service | Privacy Policy</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
